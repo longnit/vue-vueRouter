@@ -32,7 +32,9 @@
     watch: {
       //路由监听方法
       '$route' (to, from) {
-        console.log(this.$route)
+        console.log(this.$route);
+        console.log(to);
+        console.log(from);
       },
     },
     methods: {
@@ -43,7 +45,7 @@
         this.$router.push({ path: '/02/111' })
       },
       go03: function () {
-        // 发现问题：path不能喝params一起使用，否则params将无效。
+        // 发现问题：path不能和params一起使用，否则params将无效。
         this.$router.push({ name: 'com03', params: { sex: '7879' }, query: { name: 'jack', age: 15, sex: 'male' }})
       },
       go04: function () {
